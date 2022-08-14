@@ -1,20 +1,21 @@
-export const name = "Daily Task"; // exported variable
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
+
+export const name = "Daily Task"; // exporting variable
 
 //function based component syntax: using destructing
 export const Header = ({ title }) => {
-  return (
-    <header className="header">
-      {/* inline styling (css) used here for h1 */}
-      <h1 style={{color:'white'}}>First React Project - {title} </h1>
-    </header>
-  );
+	return (
+		<header className="header">
+			{/* inline styling (css) used here for h1 */}
+			<h1 style={{ color: "white" }}>First React Project - {title} </h1>
+		</header>
+	);
 };
 
 //Proptypes -- to check the props type (whether it is number, string or boolen)
-// Header.propTypes = {
-//   title: PropTypes.string.isRequired,
-// };
+Header.propTypes = {
+	title: PropTypes.string.isRequired,
+};
 
 //default props -- To set default value to prop if nothing is passed.
 // Header.defaultProps = {
